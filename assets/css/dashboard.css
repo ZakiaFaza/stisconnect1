@@ -1,0 +1,119 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.dashboard-header {
+    margin-bottom: 40px;
+}
+.dashboard-header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.dashboard-header p {
+    font-size: 18px;
+    color: var(--secondary-text-color);
+}
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.dashboard-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 25px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.card-header h2 {
+    margin-bottom: 0;
+}
+.management-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.table-description {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color); /* Garis antar baris */
+}
+.data-table thead th {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--secondary-text-color);
+}
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.data-table .action-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 15px;
+}
+.data-table .action-links a.reject {
+    color: #FF3B30;
+}
+
+/* Akordeon */
+.accordion-item {
+    border-bottom: 1px solid var(--border-color);
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.accordion-icon {
+    transition: transform 0.3s;
+}
+details[open] .accordion-icon {
+    transform: rotate(45deg);
+}
+.accordion-content {
+    padding: 0 15px 15px 15px;
+}
+.applicants-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.btn-export {
+    background-color: #34C759;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.btn-export:hover {
+    background-color: #2ca34a;
+}

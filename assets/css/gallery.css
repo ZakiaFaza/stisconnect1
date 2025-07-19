@@ -1,0 +1,42 @@
+.gallery-grid {
+    column-count: 3;
+    column-gap: 20px;
+}
+.gallery-item {
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    break-inside: avoid; /* Mencegah gambar terpotong antar kolom */
+    box-shadow: var(--shadow);
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+    color: white;
+    padding: 40px 20px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+.gallery-caption h3 { font-size: 18px; margin-bottom: 5px; }
+.gallery-caption p { font-size: 14px; opacity: 0.9; }
+
+@media (max-width: 1024px) { .gallery-grid { column-count: 2; } }
+@media (max-width: 640px) { .gallery-grid { column-count: 1; } }

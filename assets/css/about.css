@@ -1,0 +1,33 @@
+.about-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+.about-section img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+    height: 400px;
+}
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+.about-section p {
+    color: var(--secondary-text-color);
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}
